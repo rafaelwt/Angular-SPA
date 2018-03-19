@@ -1,4 +1,13 @@
-<h1>Heroes <small>Marvel y DC</small></h1>
+<h1>Buscando: <small>{{ termino }}</small></h1>
+
+<div class="row" *ngIf="heroes.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info">
+      No existen resultados con el termino: {{ termino }}
+    </div>
+  </div>
+</div>
+
 <div class="card-columns">
 
     <div class="card" *ngFor="let heroe of heroes; let i = index">
