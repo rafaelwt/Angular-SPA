@@ -77,7 +77,8 @@ export class HeroesService {
   }
 
   getHeroe(idx: string): Heroe {
-    return this.heroes[idx];
+     // return this.heroes[idx];
+     return this.heroes.find( el => el.id === Number(idx));
   }
   buscarHeroes( termino: string) {
     let heroesArr: Heroe[] = [];
